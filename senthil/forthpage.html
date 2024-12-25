@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        #pass{
+            margin-left:8%;
+        }
+        #items{
+            margin-left: 24%;
+        }
+        label{
+            margin-left: 20%;
+            font-size: large;
+        }
+        button{
+            width: 80px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div style="background-color: orange;width: 500px;height: 300px;margin-top: 15%;margin-left: 30%;">
+            <a href="./index.html" style="padding-top: 2px;float: right;margin-right: 10px;">Exit</a><br>
+            <h2 style="text-align: center;color: black;">View Passport Status</h2>
+            <br>
+            <div >
+
+                <label for="pass">Passport Number</label>
+                 <input type="text" id="pass" style="align-items: center;"><br>
+            </div>
+          <br><br>
+            <div>
+                <label for="items">Status</label>
+         <input type="text" id="items" name="items" list="itemList">
+
+         <datalist id="itemList">
+           <option value="sldfl"></option>
+           <option value="sksnks"></option>
+           <option value="wdkn"></option>
+           <option value="kwek"></option>
+         </datalist>
+
+            </div><br><br>
+            <div style="margin-left: 30%;">
+                <button style="margin-right: 60px;">Submit</button>
+            <button >Cancel</button>
+
+            </div>
+           
+
+         
+        </div>
+    </div>
+</body>
+</html>

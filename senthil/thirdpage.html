@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport Registration Form</title>
+    <style>
+        /* Same CSS from the previous code */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            width: 90%;
+            max-width: 900px;
+            background: linear-gradient(to bottom, #ffcc33, #66cccc);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .form-container .header {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .exit-button {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background-color: transparent;
+            color: red;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .exit-button:hover {
+            color: darkred;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .photo-box {
+            width: 150px;
+            height: 100px;
+            border: 2px dashed #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .cancel-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        .cancel-btn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+       <a href="./index.html"><button class="exit-button">Exit</button></a>
+        <div class="header">Passport Registration Form</div>
+        
+        <form id="passportForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="surname">Sur Name</label>
+                    <input type="text" id="surname">
+                </div>
+                <div class="form-group">
+                    <label for="district">District</label>
+                    <input type="text" id="district">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="dob">DOB</label>
+                    <input type="date" id="dob">
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="login-username">Login User Name</label>
+                    <input type="text" id="login-username">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Login Password</label>
+                    <input type="password" id="login-password">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="security-question">Security Question</label>
+                    <select id="security-question">
+                        <option>What is your pet's name?</option>
+                        <option>What is your favorite color?</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="security-answer">Security Answer</label>
+                    <input type="text" id="security-answer">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="photo-name">Photo Name</label>
+                    <input type="text" id="photo-name">
+                </div>
+                <div class="photo-box">Photo</div>
+            </div>
+            
+            <div class="buttons">
+                <button type="button" class="submit-btn">Submit</button>
+                <button type="button" class="cancel-btn" onclick="clearForm()">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function clearForm() {
+            document.getElementById("passportForm").reset();
+        }
+    </script>
+</body>
+</html>
